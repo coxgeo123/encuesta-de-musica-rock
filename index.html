@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Encuesta de Música Rock</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1,
+    h2 {
+      color: #222;
+    }
+
+    .section {
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    input[type="submit"] {
+      background-color: #d32f2f;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #b71c1c;
+    }
+  </style>
+</head>
+
+<body>
+
+  <form action="#" method="POST">
+    <h1>🎸 Encuesta de Música Rock</h1>
+
+    <div class="section">
+      <h2>Información Personal</h2>
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email">
+
+      <label for="edad">Edad:</label>
+      <input type="text" id="edad" name="edad">
+    </div>
+
+    <div class="section">
+      <h2>Gustos Musicales</h2>
+      <label>¿Qué subgéneros de rock prefieres? (Puedes elegir varios):</label>
+      <input type="checkbox" name="subgeneros[]" value="Rock clásico"> Rock clásico<br>
+      <input type="checkbox" name="subgeneros[]" value="Hard rock"> Hard rock<br>
+      <input type="checkbox" name="subgeneros[]" value="Punk rock"> Punk rock<br>
+      <input type="checkbox" name="subgeneros[]" value="Grunge"> Grunge<br>
+      <input type="checkbox" name="subgeneros[]" value="Indie rock"> Indie rock<br>
+      <input type="checkbox" name="subgeneros[]" value="Metal alternativo"> Metal alternativo<br>
+      <input type="checkbox" name="subgeneros[]" value="Garage rock"> Garage rock<br>
+      <input type="checkbox" name="subgeneros[]" value="Otro"> Otro<br>
+
+      <label for="artistas">¿Cuáles son tus 5 bandas o artistas de rock favoritos?</label>
+      <textarea name="artistas" id="artistas" rows="3"></textarea>
+
+      <label for="años">¿Desde qué año escuchas rock?</label>
+      <input type="text" name="años" id="años">
+    </div>
+
+    <div class="section">
+      <h2>Conocimiento Musical</h2>
+      <label>¿Qué tan conocedor(a) te consideras del género rock?</label><br>
+      <input type="radio" name="conocimiento" value="Experto"> Experto<br>
+      <input type="radio" name="conocimiento" value="Avanzado"> Avanzado<br>
+      <input type="radio" name="conocimiento" value="Intermedio"> Intermedio<br>
+      <input type="radio" name="conocimiento" value="Principiante"> Principiante<br>
+
+      <label for="instrumento">¿Tocas algún instrumento relacionado con el rock?</label>
+      <input type="text" name="instrumento" id="instrumento">
+
+      <label for="discos">Menciona 3 discos que consideras fundamentales en la historia del rock:</label>
+      <textarea name="discos" id="discos" rows="3"></textarea>
+    </div>
+
+    <div class="section">
+      <h2>Votación: Bandas Legendarias</h2>
+      <label>Elige tu banda legendaria favorita:</label><br>
+      <input type="radio" name="banda_favorita" value="The Beatles"> The Beatles<br>
+      <input type="radio" name="banda_favorita" value="Led Zeppelin"> Led Zeppelin<br>
+      <input type="radio" name="banda_favorita" value="Pink Floyd"> Pink Floyd<br>
+      <input type="radio" name="banda_favorita" value="Queen"> Queen<br>
+      <input type="radio" name="banda_favorita" value="The Rolling Stones"> The Rolling Stones<br>
+      <input type="radio" name="banda_favorita" value="Otro"> Otro<br>
+    </div>
+
+    <div class="section">
+      <h2>Hábitos de Escucha</h2>
+      <label for="frecuencia">¿Con qué frecuencia escuchas rock?</label>
+      <select name="frecuencia" id="frecuencia">
+        <option value="Diariamente">Diariamente</option>
+        <option value="Varias veces por semana">Varias veces por semana</option>
+        <option value="Ocasionalmente">Ocasionalmente</option>
+        <option value="Rara vez">Rara vez</option>
+      </select>
+
+      <label for="formato">¿Cómo prefieres escuchar música?</label>
+      <select name="formato" id="formato">
+        <option value="Spotify">Spotify</option>
+        <option value="YouTube">YouTube</option>
+        <option value="Vinilos/CDs">Vinilos/CDs</option>
+        <option value="MP3/Descargas">MP3/Descargas</option>
+        <option value="Radio">Radio</option>
+        <option value="Otro">Otro</option>
+      </select>
+    </div>
+
+    <div class="section">
+      <h2>Opiniones</h2>
+      <label for="opinion_rock">¿Cómo describirías la evolución del rock en los últimos años?</label>
+      <textarea id="opinion_rock" name="opinion_rock" rows="4"></textarea>
+
+      <label for="recomendacion">¿Qué banda emergente de rock recomendarías?</label>
+      <textarea id="recomendacion" name="recomendacion" rows="2"></textarea>
+
+      <label for="conciertos">¿Has asistido a conciertos de rock en vivo? Cuéntanos tu experiencia favorita:</label>
+      <textarea id="conciertos" name="conciertos" rows="4"></textarea>
+    </div>
+
+    <div class="section">
+      <input type="submit" value="Enviar encuesta">
+    </div>
+  </form>
+</body>
+
+</html>
